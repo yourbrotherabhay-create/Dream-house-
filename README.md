@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Homes Real Estate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+header{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+}
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(5px);
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ffb400;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffb400;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.search-box{
+    margin-top:30px;
+    background:white;
+    padding:10px;
+    border-radius:50px;
+    display:flex;
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:15px;
+    border-radius:50px;
+    font-size:16px;
+}
+
+.search-box button{
+    border:none;
+    background:#ffb400;
+    padding:15px 30px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+}
+
+.properties{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    margin-top:10px;
+    color:#ff6600;
+    font-weight:700;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.9;
+    color:#555;
+}
+
+.contact{
+    background:#111827;
+    color:white;
+    border-radius:20px;
+    padding:50px;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+}
+
+.contact button{
+    padding:15px 40px;
+    border:none;
+    background:#ffb400;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:38px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.search-box{
+    flex-direction:column;
+    border-radius:20px;
+}
+
+.search-box button{
+    width:100%;
+    margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav>
+    <div class="logo">Dream<span>Homes</span></div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <h1>Find Your Perfect Dream Home</h1>
+
+        <p>
+            Discover luxury apartments, modern villas and beautiful family homes
+            in the best locations with affordable pricing.
+        </p>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search city, apartment or villa">
+            <button>Search</button>
+        </div>
+
+    </div>
+
+</div>
+
+</header>
+
+<section id="properties">
+
+<div class="section-title">
+    <h2>Featured Properties</h2>
+</div>
+
+<div class="properties">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+            <h3>Luxury Family House</h3>
+            <p>4 Bedrooms • 3 Bathrooms • Garden Area</p>
+            <div class="price">₹85 Lakhs</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+            <h3>Modern Apartment</h3>
+            <p>3 Bedrooms • City View • Parking</p>
+            <div class="price">₹60 Lakhs</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+            <h3>Premium Villa</h3>
+            <p>Luxury Interior • Swimming Pool</p>
+            <div class="price">₹1.2 Crore</div>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="about">
+
+    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="about-text">
+
+        <h2>About Our Company</h2>
+
+        <p>
+            Dream Homes is a modern real estate company helping people buy,
+            rent and sell properties with trust and transparency.
+            We provide premium houses, apartments and villas with the
+            best customer experience and affordable pricing.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Write your message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+    <p>© 2026 Dream Homes Real Estate. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
